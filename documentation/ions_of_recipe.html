@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>media_design.ions_of_recipe API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>media_design.ions_of_recipe</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="media_design.ions_of_recipe.convert_reagents_to_ions"><code class="name flex">
+<span>def <span class="ident">convert_reagents_to_ions</span></span>(<span>reagent_csv_path, output_csv_path, pH, temperature, pressure, master_reagents_path='')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convert_reagents_to_ions(
+    reagent_csv_path,
+    output_csv_path,
+    pH,
+    temperature,
+    pressure,
+    master_reagents_path=&#34;&#34;
+):
+    &#34;&#34;&#34;
+    Convert reagent concentrations to ion molalities formatted for speciation input.
+
+    Parameters
+    ----------
+    reagent_csv_path : str or pathlib.Path
+        Path to a CSV file containing reagent names and concentrations. The file
+        is expected to contain two columns that will be interpreted as
+        &#39;reagent&#39; and &#39;concentration&#39;. The first row of the concentration
+        column must contain the unit string, which must include one of:
+        &#39;mg&#39;, &#39;g&#39;, or &#39;mol&#39; (for mg/L, g/L, or mol/L input).
+    output_csv_path : str or pathlib.Path
+        Path where the formatted speciation CSV will be written.
+    pH : float
+        pH value to insert into the output file under the &#39;H+&#39; column if that
+        column exists in the speciation template.
+    temperature : float
+        Temperature value to insert into the output file under the
+        &#39;Temperature&#39; column if that column exists in the speciation template.
+    pressure : float
+        Pressure value to insert into the output file under the &#39;Pressure&#39;
+        column if that column exists in the speciation template.
+    master_reagents_path : str or pathlib.Path, optional
+        Path to the master reagent database CSV. If not provided, the function
+        uses &#39;master-reagents.csv&#39; located in the same directory as this module.
+
+    Returns
+    -------
+    pandas.DataFrame
+        A formatted DataFrame containing:
+        - row 0: unit labels
+        - row 1: the generated recipe/sample data row
+
+    Input Format
+    ------------
+    The reagent input CSV must contain two columns representing:
+    - reagent
+    - concentration
+
+    The first row of the concentration column is interpreted as the unit label,
+    not as data. All remaining rows are treated as reagent concentration data.
+
+    Supported unit conventions:
+    - mg/L
+    - g/L
+    - mol/L
+
+    Notes
+    -----
+    - Reagent concentrations are converted as follows:
+        - mg/L to mol/L using:
+          (concentration / 1000) / molar_mass
+        - g/L to mol/L using:
+          concentration / molar_mass
+        - mol/L is used directly
+    - Ion molality is calculated as:
+      reagent mol/L × stoichiometric coefficient
+    - Ion totals are summed across all contributing reagents.
+    - Missing ions are appended to the speciation template and
+      assigned the unit label &#39;Molality&#39;.
+
+    &#34;&#34;&#34;
+
+    # Resolve internal paths 
+    tools_dir = Path(__file__).parent
+
+    if master_reagents_path == &#34;&#34;:
+        master_path = tools_dir / &#34;master-reagents.csv&#34;
+    else:
+        master_path = Path(master_reagents_path)
+
+    speciation_path = tools_dir / &#34;speciation-formatting.csv&#34;
+
+
+    # Load reagent file
+    reagent_csv_path = Path(reagent_csv_path)
+    file_name = reagent_csv_path.stem
+
+    reag_df = pd.read_csv(reagent_csv_path)
+    reag_df.columns = [&#34;reagent&#34;, &#34;concentration&#34;]
+
+    unit_string = str(reag_df.iloc[0][&#34;concentration&#34;]).strip().lower()
+    reag_df = reag_df.iloc[1:].copy()
+
+    reag_df[&#34;concentration&#34;] = pd.to_numeric(
+        reag_df[&#34;concentration&#34;], errors=&#34;coerce&#34;
+    ).fillna(0.0)
+
+
+    # Load master reagents
+    master = pd.read_csv(master_path)
+    master[&#34;stoichiometry&#34;] = pd.to_numeric(master[&#34;stoichiometry&#34;], errors=&#34;coerce&#34;)
+    master[&#34;molar_mass&#34;] = pd.to_numeric(master[&#34;molar_mass&#34;], errors=&#34;coerce&#34;)
+
+    mm = (
+        master[[&#34;reagent_name&#34;, &#34;molar_mass&#34;]]
+        .drop_duplicates()
+        .set_index(&#34;reagent_name&#34;)[&#34;molar_mass&#34;]
+    )
+
+    reag_df[&#34;molar_mass&#34;] = reag_df[&#34;reagent&#34;].map(mm)
+
+    if reag_df[&#34;molar_mass&#34;].isna().any():
+        missing = reag_df.loc[reag_df[&#34;molar_mass&#34;].isna(), &#34;reagent&#34;].tolist()
+        raise ValueError(f&#34;Reagents not found in master-reagents: {missing}&#34;)
+
+    # Convert to mol/L
+    if &#34;mg&#34; in unit_string:
+        reag_df[&#34;mol_L&#34;] = (reag_df[&#34;concentration&#34;] / 1000.0) / reag_df[&#34;molar_mass&#34;]
+
+    elif &#34;g&#34; in unit_string:
+        reag_df[&#34;mol_L&#34;] = reag_df[&#34;concentration&#34;] / reag_df[&#34;molar_mass&#34;]
+
+    elif &#34;mol&#34; in unit_string:
+        reag_df[&#34;mol_L&#34;] = reag_df[&#34;concentration&#34;]
+
+    else:
+        raise ValueError(
+            f&#34;Unsupported units detected: &#39;{unit_string}&#39;. &#34;
+            &#34;Must contain mg/L, g/L, or mol/L.&#34;
+        )
+
+    # Apply stoichiometry
+    merged = master.merge(
+        reag_df[[&#34;reagent&#34;, &#34;mol_L&#34;]],
+        left_on=&#34;reagent_name&#34;,
+        right_on=&#34;reagent&#34;,
+        how=&#34;inner&#34;,
+    )
+
+    merged[&#34;ion_molality&#34;] = merged[&#34;mol_L&#34;] * merged[&#34;stoichiometry&#34;]
+
+    ion_totals = (
+        merged.groupby(&#34;ion&#34;)[&#34;ion_molality&#34;]
+        .sum()
+        .sort_index()
+    )
+
+
+    # Load speciation template
+    spec_template = pd.read_csv(speciation_path, header=None)
+
+    header_row = spec_template.iloc[0].tolist()
+    units_row = spec_template.iloc[1].tolist()
+
+
+    # Add missing ions dynamically
+    for ion in ion_totals.index:
+        if ion not in header_row:
+            header_row.append(ion)
+            units_row.append(&#34;Molality&#34;)
+
+
+    # Build output row
+    output_data = {col: &#34;&#34; for col in header_row}
+
+    # Force Sample and Name columns
+    if &#34;Sample&#34; in header_row:
+        output_data[&#34;Sample&#34;] = &#34;recipe&#34;
+
+    if &#34;Name&#34; in header_row:
+        output_data[&#34;Name&#34;] = file_name
+
+    # Insert environmental parameters
+    if &#34;H+&#34; in header_row:
+        output_data[&#34;H+&#34;] = pH
+
+    if &#34;Temperature&#34; in header_row:
+        output_data[&#34;Temperature&#34;] = temperature
+
+    if &#34;Pressure&#34; in header_row:
+        output_data[&#34;Pressure&#34;] = pressure
+
+    # Fill ion molalities
+    for ion, value in ion_totals.items():
+        output_data[ion] = float(value)
+        idx = header_row.index(ion)
+        units_row[idx] = &#34;Molality&#34;
+
+
+    # Construct final dataframe
+    final_df = pd.DataFrame(
+        [units_row, [output_data[col] for col in header_row]],
+        columns=header_row,
+    )
+
+    final_df.to_csv(output_csv_path, index=False)
+
+    return final_df</code></pre>
+</details>
+<div class="desc"><p>Convert reagent concentrations to ion molalities formatted for speciation input.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>reagent_csv_path</code></strong> :&ensp;<code>str</code> or <code>pathlib.Path</code></dt>
+<dd>Path to a CSV file containing reagent names and concentrations. The file
+is expected to contain two columns that will be interpreted as
+'reagent' and 'concentration'. The first row of the concentration
+column must contain the unit string, which must include one of:
+'mg', 'g', or 'mol' (for mg/L, g/L, or mol/L input).</dd>
+<dt><strong><code>output_csv_path</code></strong> :&ensp;<code>str</code> or <code>pathlib.Path</code></dt>
+<dd>Path where the formatted speciation CSV will be written.</dd>
+<dt><strong><code>pH</code></strong> :&ensp;<code>float</code></dt>
+<dd>pH value to insert into the output file under the 'H+' column if that
+column exists in the speciation template.</dd>
+<dt><strong><code>temperature</code></strong> :&ensp;<code>float</code></dt>
+<dd>Temperature value to insert into the output file under the
+'Temperature' column if that column exists in the speciation template.</dd>
+<dt><strong><code>pressure</code></strong> :&ensp;<code>float</code></dt>
+<dd>Pressure value to insert into the output file under the 'Pressure'
+column if that column exists in the speciation template.</dd>
+<dt><strong><code>master_reagents_path</code></strong> :&ensp;<code>str</code> or <code>pathlib.Path</code>, optional</dt>
+<dd>Path to the master reagent database CSV. If not provided, the function
+uses 'master-reagents.csv' located in the same directory as this module.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>A formatted DataFrame containing:
+- row 0: unit labels
+- row 1: the generated recipe/sample data row</dd>
+</dl>
+<h2 id="input-format">Input Format</h2>
+<p>The reagent input CSV must contain two columns representing:
+- reagent
+- concentration</p>
+<p>The first row of the concentration column is interpreted as the unit label,
+not as data. All remaining rows are treated as reagent concentration data.</p>
+<p>Supported unit conventions:
+- mg/L
+- g/L
+- mol/L</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Reagent concentrations are converted as follows:<ul>
+<li>mg/L to mol/L using:
+(concentration / 1000) / molar_mass</li>
+<li>g/L to mol/L using:
+concentration / molar_mass</li>
+<li>mol/L is used directly</li>
+</ul>
+</li>
+<li>Ion molality is calculated as:
+reagent mol/L × stoichiometric coefficient</li>
+<li>Ion totals are summed across all contributing reagents.</li>
+<li>Missing ions are appended to the speciation template and
+assigned the unit label 'Molality'.</li>
+</ul></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="media_design" href="index.html">media_design</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="media_design.ions_of_recipe.convert_reagents_to_ions" href="#media_design.ions_of_recipe.convert_reagents_to_ions">convert_reagents_to_ions</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>

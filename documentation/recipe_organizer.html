@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>media_design.recipe_organizer API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>media_design.recipe_organizer</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="media_design.recipe_organizer.merge_trace_into_base"><code class="name flex">
+<span>def <span class="ident">merge_trace_into_base</span></span>(<span>base_df, trace_stock_df, trace_stock_mL_per_L=1.0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def merge_trace_into_base(base_df, trace_stock_df, trace_stock_mL_per_L=1.0):
+    &#34;&#34;&#34;
+    Merge a trace stock recipe into a base recipe at final media concentrations.
+
+    Parameters
+    ----------
+    base_df : pandas.DataFrame
+        Base recipe DataFrame containing at least:
+        - &#39;reagent&#39;
+        - &#39;g_per_L_final&#39;
+    trace_stock_df : pandas.DataFrame
+        Trace stock recipe DataFrame containing at least:
+        - &#39;reagent&#39;
+        - &#39;g_per_L_stock&#39;
+    trace_stock_mL_per_L : float, optional
+        Trace stock dosing volume in mL per liter of final media. Default is
+        1.0 mL/L.
+
+    Returns
+    -------
+    pandas.DataFrame
+        Merged recipe DataFrame with columns:
+        - &#39;reagent&#39;
+        - &#39;g_per_L_final&#39;
+
+    &#34;&#34;&#34;
+    trace_final = trace_stock_df.copy()
+
+    trace_final[&#34;g_per_L_final&#34;] = (
+        trace_final[&#34;g_per_L_stock&#34;] * trace_stock_mL_per_L / 1000.0
+    )
+
+    trace_final = trace_final[[&#34;reagent&#34;, &#34;g_per_L_final&#34;]]
+
+    merged = pd.concat([base_df, trace_final], ignore_index=True)
+
+
+    # Collapse duplicate reagents by summing g_per_L_final
+
+    merged[&#34;g_per_L_final&#34;] = pd.to_numeric(
+        merged[&#34;g_per_L_final&#34;], errors=&#34;coerce&#34;
+    ).fillna(0.0)
+
+    merged = (
+        merged
+        .groupby(&#34;reagent&#34;, as_index=False)
+        .agg({&#34;g_per_L_final&#34;: &#34;sum&#34;})
+        .sort_values(&#34;reagent&#34;)
+        .reset_index(drop=True)
+    )
+
+    return merged</code></pre>
+</details>
+<div class="desc"><p>Merge a trace stock recipe into a base recipe at final media concentrations.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>base_df</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Base recipe DataFrame containing at least:
+- 'reagent'
+- 'g_per_L_final'</dd>
+<dt><strong><code>trace_stock_df</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Trace stock recipe DataFrame containing at least:
+- 'reagent'
+- 'g_per_L_stock'</dd>
+<dt><strong><code>trace_stock_mL_per_L</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Trace stock dosing volume in mL per liter of final media. Default is
+1.0 mL/L.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>Merged recipe DataFrame with columns:
+- 'reagent'
+- 'g_per_L_final'</dd>
+</dl></div>
+</dd>
+<dt id="media_design.recipe_organizer.print_organized_recipe"><code class="name flex">
+<span>def <span class="ident">print_organized_recipe</span></span>(<span>base_df,<br>reagents_csv_path='master-reagents.csv',<br>*,<br>metal_ions=None,<br>preferred_min_mass=0.1,<br>fallback_min_mass=0.01,<br>min_add_mL_per_L=0.01,<br>max_mass_per_100mL=10.0,<br>stock_volume_mL=100,<br>max_trace_mass_per_1L=10.0,<br>serial_dilutions=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def print_organized_recipe(
+    base_df,
+    reagents_csv_path=&#34;master-reagents.csv&#34;,
+    *,
+    metal_ions=None,
+    preferred_min_mass=0.1,
+    fallback_min_mass=0.01,
+    min_add_mL_per_L=0.01,
+    max_mass_per_100mL=10.0,
+    stock_volume_mL=100,
+    max_trace_mass_per_1L=10.0,
+    serial_dilutions=False
+):
+    &#34;&#34;&#34;
+    Print a user-friendly grouped preparation plan.
+
+    Primary grouping logic is limited to:
+    1. mass/stock-preparation constraints
+    2. autoclave instruction
+
+    Compatibility is retained as a constraint layer. Reagents are first considered
+    within their mass/autoclave buckets, but they are only placed in the same
+    subgroup if their ion/exclusion rules allow it.
+
+    Reagents that fit the standard stock constraints are printed as BASE STOCKS.
+    Reagents that do not fit are collected as TRACE STOCKS and printed as serial
+    dilutions when serial_dilutions=True.
+
+    `metal_ions` is retained for backward compatibility but is not used.
+    &#34;&#34;&#34;
+    stock_volume_L = stock_volume_mL / 1000
+
+    ions_map, non_autocl_map, excluded_map = _build_master_maps(reagents_csv_path)
+
+    final_g = {
+        str(r[&#34;reagent&#34;]).strip(): float(r[&#34;g_per_L_final&#34;])
+        for _, r in base_df.iterrows()
+        if float(r[&#34;g_per_L_final&#34;]) &gt; 0
+    }
+
+    items = []
+    for reagent, g in final_g.items():
+        ions = ions_map.get(reagent, set())
+        excluded = excluded_map.get(reagent, set())
+        items.append({
+            &#34;reagent&#34;: reagent,
+            &#34;g_per_L_final&#34;: g,
+            &#34;non_autocl&#34;: non_autocl_map.get(reagent, False),
+            &#34;ions&#34;: set(ions),
+            &#34;excluded&#34;: set(excluded),
+        })
+
+    unmeasurable = []
+
+    print(&#34;\n== USER-FRIENDLY PREP ==\n&#34;)
+    print(&#34;\n=== BASE STOCKS ===\n&#34;)
+
+    roman_idx = 0
+
+    for auto_bucket in [False, True]:
+        bucket = [it for it in items if it[&#34;non_autocl&#34;] == auto_bucket]
+        bucket.sort(key=lambda x: x[&#34;g_per_L_final&#34;], reverse=True)
+
+        subgroups = []
+
+        for it in bucket:
+            placed = False
+            for sg in subgroups:
+                if not _can_place(it[&#34;ions&#34;], it[&#34;excluded&#34;], sg[&#34;_ions&#34;], sg[&#34;_excluded&#34;]):
+                    continue
+
+                test = sg[&#34;items&#34;] + [it]
+                factor, used_min = _find_stock_factor(
+                    test,
+                    final_g,
+                    stock_volume_L=stock_volume_L,
+                    preferred_min=preferred_min_mass,
+                    fallback_min=fallback_min_mass,
+                    min_add_mL=min_add_mL_per_L,
+                    max_mass=max_mass_per_100mL,
+                )
+
+                if factor:
+                    sg[&#34;items&#34;].append(it)
+                    sg[&#34;_ions&#34;] |= it[&#34;ions&#34;]
+                    sg[&#34;_excluded&#34;] |= it[&#34;excluded&#34;]
+                    sg[&#34;factor&#34;] = factor
+                    sg[&#34;used_min&#34;] = used_min
+                    placed = True
+                    break
+
+            if not placed:
+                factor, used_min = _find_stock_factor(
+                    [it],
+                    final_g,
+                    stock_volume_L=stock_volume_L,
+                    preferred_min=preferred_min_mass,
+                    fallback_min=fallback_min_mass,
+                    min_add_mL=min_add_mL_per_L,
+                    max_mass=max_mass_per_100mL,
+                )
+
+                if factor is None:
+                    unmeasurable.append(it)
+                else:
+                    subgroups.append({
+                        &#34;items&#34;: [it],
+                        &#34;_ions&#34;: set(it[&#34;ions&#34;]),
+                        &#34;_excluded&#34;: set(it[&#34;excluded&#34;]),
+                        &#34;factor&#34;: factor,
+                        &#34;used_min&#34;: used_min,
+                    })
+
+        subgroups.sort(key=_group_sort_value, reverse=True)
+
+        for sg in subgroups:
+            sg[&#34;items&#34;] = _items_desc(sg[&#34;items&#34;])
+            label = ROMAN[roman_idx] if roman_idx &lt; len(ROMAN) else str(roman_idx + 1)
+            roman_idx += 1
+            factor = sg[&#34;factor&#34;]
+            add_mL = 1000.0 / factor
+
+            header = (
+                f&#34;Group {label} — {factor}× base stock &#34;
+                f&#34;(weigh into {stock_volume_mL} mL, add {_fmt_mL(add_mL)} per L)&#34;
+            )
+            if auto_bucket:
+                header = (
+                    f&#34;Group {label} — NON-AUTOCLAVABLE — {factor}× base stock &#34;
+                    f&#34;(weigh into {stock_volume_mL} mL, add {_fmt_mL(add_mL)} per L)&#34;
+                )
+
+            print(header + &#34;:&#34;)
+            for it in sg[&#34;items&#34;]:
+                mass = it[&#34;g_per_L_final&#34;] * factor * stock_volume_L
+                print(f&#34;  {_fmt_mass(mass)} g {it[&#39;reagent&#39;]}&#34;)
+            print()
+
+    if serial_dilutions and unmeasurable:
+        print(&#34;\n=== TRACE SERIAL STOCKS ===\n&#34;)
+        roman_idx = 0
+
+        for auto_bucket in [False, True]:
+            bucket = [it for it in unmeasurable if it[&#34;non_autocl&#34;] == auto_bucket]
+            bucket.sort(key=lambda x: x[&#34;g_per_L_final&#34;], reverse=True)
+            if not bucket:
+                continue
+
+            compatible_groups = []
+            for it in bucket:
+                placed = False
+                for sg in compatible_groups:
+                    if not _can_place(it[&#34;ions&#34;], it[&#34;excluded&#34;], sg[&#34;_ions&#34;], sg[&#34;_excluded&#34;]):
+                        continue
+                    sg[&#34;items&#34;].append(it)
+                    sg[&#34;_ions&#34;] |= it[&#34;ions&#34;]
+                    sg[&#34;_excluded&#34;] |= it[&#34;excluded&#34;]
+                    placed = True
+                    break
+
+                if not placed:
+                    compatible_groups.append({
+                        &#34;items&#34;: [it],
+                        &#34;_ions&#34;: set(it[&#34;ions&#34;]),
+                        &#34;_excluded&#34;: set(it[&#34;excluded&#34;]),
+                    })
+
+            compatible_groups.sort(key=_group_sort_value, reverse=True)
+
+            for compat_group in compatible_groups:
+                compat_group[&#34;items&#34;] = _items_desc(compat_group[&#34;items&#34;])
+                split_sets = _split_trace_by_mass_window(
+                    compat_group[&#34;items&#34;],
+                    preferred_min_mass=preferred_min_mass,
+                    max_trace_mass=max_trace_mass_per_1L,
+                )
+
+                split_sets.sort(
+                    key=lambda pair: max(x[&#34;g_per_L_final&#34;] for x in pair[0]),
+                    reverse=True,
+                )
+
+                for sub_items, primary_factor in split_sets:
+                    sub_items = _items_desc(sub_items)
+                    label = ROMAN[roman_idx] if roman_idx &lt; len(ROMAN) else str(roman_idx + 1)
+                    roman_idx += 1
+                    working_factor = primary_factor // 1000
+
+                    header = f&#34;Group {label} — Compatible trace stock (serial dilution)&#34;
+                    if auto_bucket:
+                        header = f&#34;Group {label} — NON-AUTOCLAVABLE — Compatible trace stock (serial dilution)&#34;
+
+                    print(header)
+                    print(f&#34;  Step 1 — Primary stock ({int(primary_factor)}×, 1 L):&#34;)
+                    print(f&#34;    Weigh into 1 L DI water (target: &lt;= {max_trace_mass_per_1L:g} g max reagent):&#34;)
+                    for it in sub_items:
+                        mass = it[&#34;g_per_L_final&#34;] * primary_factor
+                        print(f&#34;      {_fmt_mass(mass)} g {it[&#39;reagent&#39;]}&#34;)
+
+                    print(f&#34;\n  Step 2 — Working stock ({int(working_factor)}×, 1 L):&#34;)
+                    print(&#34;    Add 1 mL primary stock to 1 L DI water.&#34;)
+                    print(&#34;\n  Step 3 — Media addition:&#34;)
+                    print(&#34;    Add 1 mL working stock per 1 L media.\n&#34;)
+
+    elif unmeasurable:
+        print(&#34;\n=== TRACE STOCKS NEEDED ===\n&#34;)
+        print(&#34;The following reagents could not meet the base-stock mass/pipetting constraints.&#34;)
+        print(&#34;Run again with serial_dilutions=True to print trace serial stocks.\n&#34;)
+        for it in sorted(unmeasurable, key=lambda x: x[&#34;g_per_L_final&#34;], reverse=True):
+            label = &#34;NON-AUTOCLAVABLE&#34; if it[&#34;non_autocl&#34;] else &#34;AUTOCLAVABLE&#34;
+            print(f&#34;  {it[&#39;reagent&#39;]} ({label}): {it[&#39;g_per_L_final&#39;]:.6g} g/L final&#34;)</code></pre>
+</details>
+<div class="desc"><p>Print a user-friendly grouped preparation plan.</p>
+<p>Primary grouping logic is limited to:
+1. mass/stock-preparation constraints
+2. autoclave instruction</p>
+<p>Compatibility is retained as a constraint layer. Reagents are first considered
+within their mass/autoclave buckets, but they are only placed in the same
+subgroup if their ion/exclusion rules allow it.</p>
+<p>Reagents that fit the standard stock constraints are printed as BASE STOCKS.
+Reagents that do not fit are collected as TRACE STOCKS and printed as serial
+dilutions when serial_dilutions=True.</p>
+<p><code>metal_ions</code> is retained for backward compatibility but is not used.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="media_design" href="index.html">media_design</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="media_design.recipe_organizer.merge_trace_into_base" href="#media_design.recipe_organizer.merge_trace_into_base">merge_trace_into_base</a></code></li>
+<li><code><a title="media_design.recipe_organizer.print_organized_recipe" href="#media_design.recipe_organizer.print_organized_recipe">print_organized_recipe</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>media_design.recipe_maker API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>media_design.recipe_maker</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="media_design.recipe_maker.create_recipe"><code class="name flex">
+<span>def <span class="ident">create_recipe</span></span>(<span>reagents: dict,<br>geochem_dict: dict,<br>*,<br>trace_threshold: float = 1e-06,<br>trace_ions: list[str] | None = None,<br>trace_stock_mL_per_L: float = 1.0,<br>enforce_trace_hardmin: bool = True,<br>reagent_cutoff_g_L: float = 0.0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_recipe(
+    reagents: dict,
+    geochem_dict: dict,
+    *,
+    trace_threshold: float = 1e-6,
+    trace_ions: list[str] | None = None,     # []/None =&gt; threshold mode
+    trace_stock_mL_per_L: float = 1.0,       # 1 mL into 1 L = 1000×
+    enforce_trace_hardmin: bool = True,
+    reagent_cutoff_g_L: float = 0.0,
+):
+    &#34;&#34;&#34;
+    Generate a two-part media recipe consisting of a base medium and a trace stock.
+
+    Parameters
+    ----------
+    reagents : dict
+        Reagent definition dictionary in the standard nested format expected by
+        `solve_media_lp`.
+    geochem_dict : dict
+        Full target ion composition dictionary mapping ion names to final target
+        concentrations.
+    trace_threshold : float, optional
+        Concentration threshold used to classify ions as trace when
+        `trace_ions` is not provided. Default is 1e-6.
+    trace_ions : list of str or None, optional
+        Explicit list of ions to classify as trace. If provided and non-empty,
+        this overrides threshold-based classification. Default is None.
+    trace_stock_mL_per_L : float, optional
+        Trace stock addition volume in mL per L of final medium. Used to convert
+        final trace targets into stock concentrations. For example, 1 mL/L
+        corresponds to a 1000× stock. Default is 1.0.
+    enforce_trace_hardmin : bool, optional
+        If True, apply hard-minimum constraints to trace ions in the trace stock
+        solve. Default is True.
+    reagent_cutoff_g_L : float, optional
+        Minimum reagent concentration in g/L required for inclusion in the
+        output reagent tables. Reagents at or below this threshold are omitted
+        from the returned recipe DataFrames. Default is 0.0.
+
+    Returns
+    -------
+    tuple
+        Tuple containing:
+
+        - base_df : pandas.DataFrame
+            Base-medium reagent recipe with columns:
+            - &#39;reagent&#39;
+            - &#39;mmol_per_L_final&#39;
+            - &#39;g_per_L_final&#39;
+
+        - trace_stock_df : pandas.DataFrame
+            Trace-stock reagent recipe with columns:
+            - &#39;reagent&#39;
+            - &#39;mmol_per_L_stock&#39;
+            - &#39;g_per_L_stock&#39;
+
+        - ions_total_df : pandas.DataFrame
+            Combined ion concentrations in the final medium with columns:
+            - &#39;ion&#39;
+            - &#39;base_mmol_L_final&#39;
+            - &#39;trace_mmol_L_final&#39;
+            - &#39;total_mmol_L_final&#39;
+            - &#39;target_mmol_L_final&#39;
+
+        - meta : dict
+            Dictionary of metadata and raw solver outputs, including:
+            - stock and dilution factors
+            - base and trace target dictionaries
+            - solver result objects
+            - ion contribution arrays
+
+    Notes
+    -----
+    - A stock made at `trace_stock_mL_per_L = 1.0` mL/L is treated as a 1000×
+      stock.
+    - Base ions are solved directly at final media concentrations.
+    - Trace ions are solved at stock concentrations, then scaled back into final
+      media contributions.
+    - Reagent masses are reported in g/L using reagent molar masses.
+    - Reagent rows can be filtered from the output tables using
+      `reagent_cutoff_g_L`.
+    - The function assumes that base and trace solves produce the same
+      `all_ions` ordering because both are derived from the same reagent set.
+    &#34;&#34;&#34;
+    
+    if trace_stock_mL_per_L &lt;= 0:
+        raise ValueError(&#34;trace_stock_mL_per_L must be &gt; 0&#34;)
+
+    # dilution factor: stock is diluted by (mL/L)/1000
+    # so stock concentration = final / (mL/L / 1000) = final * (1000 / (mL/L))
+    stock_factor = 1000.0 / float(trace_stock_mL_per_L)
+    dilution = 1.0 / stock_factor  # fraction of stock in final media
+
+    # Split ions into base vs trace
+    geochem_base, geochem_trace_final = split_geochem_targets(
+        geochem_dict,
+        trace_threshold=trace_threshold,
+        trace_ions=trace_ions,
+    )
+
+    # Scale trace targets to STOCK concentrations
+    geochem_trace_stock = {ion: float(v) * stock_factor for ion, v in geochem_trace_final.items()}
+
+    # Solve BASE
+    res_b, all_ions_b, target_ions_b, A_b, target_idx_b, off_b, reagent_names_b = solve_media_lp(
+        reagents,
+        geochem_base,
+    )
+    if not res_b.success:
+        raise RuntimeError(f&#34;Base LP failed: {res_b.message}&#34;)
+
+    # Solve TRACE (as STOCK)
+    hardmins = set(geochem_trace_stock.keys()) if enforce_trace_hardmin else set()
+    res_t, all_ions_t, target_ions_t, A_t, target_idx_t, off_t, reagent_names_t = solve_media_lp(
+        reagents,
+        geochem_trace_stock,
+        trace_elements=set(geochem_trace_stock.keys()),
+        hard_min_ions=hardmins,
+    )
+    if not res_t.success:
+        raise RuntimeError(f&#34;Trace-stock LP failed: {res_t.message}&#34;)
+
+    # Ensure consistent ion ordering (should match because derived from reagents)
+    if all_ions_b != all_ions_t:
+        raise ValueError(&#34;all_ions mismatch between base and trace solves (unexpected).&#34;)
+
+    def _reagent_df(res, reagent_names, *, mmol_col: str, g_col: str):
+        x = res.x[:len(reagent_names)]
+        df = pd.DataFrame({
+            &#34;reagent&#34;: reagent_names,
+            mmol_col: x,
+            g_col: [float(xi) * float(reagents[name][&#34;molar_mass&#34;]) / 1000.0
+                    for xi, name in zip(x, reagent_names)],
+        })
+        if reagent_cutoff_g_L &gt; 0:
+            df = df[df[g_col] &gt; reagent_cutoff_g_L].reset_index(drop=True)
+        return df
+
+    def _ion_vector(res, A):
+        x = res.x[:A.shape[1]]
+        return A @ x
+
+    # Reagent dataframes
+    base_df = _reagent_df(res_b, reagent_names_b, mmol_col=&#34;mmol_per_L_final&#34;, g_col=&#34;g_per_L_final&#34;)
+    trace_stock_df = _reagent_df(res_t, reagent_names_t, mmol_col=&#34;mmol_per_L_stock&#34;, g_col=&#34;g_per_L_stock&#34;)
+
+    # Ion contributions
+    ions_base_final = _ion_vector(res_b, A_b)                 # mmol/L final
+    ions_trace_stock = _ion_vector(res_t, A_t)                # mmol/L in stock
+    ions_trace_final = ions_trace_stock * dilution            # mmol/L final contributed by dosing
+    ions_total_final = ions_base_final + ions_trace_final
+
+    ions_total_df = pd.DataFrame({
+        &#34;ion&#34;: all_ions_b,
+        &#34;base_mmol_L_final&#34;: ions_base_final,
+        &#34;trace_mmol_L_final&#34;: ions_trace_final,
+        &#34;total_mmol_L_final&#34;: ions_total_final,
+        &#34;target_mmol_L_final&#34;: [float(geochem_dict.get(ion, 0.0)) for ion in all_ions_b],
+    })
+
+    meta = {
+        &#34;stock_factor&#34;: stock_factor,
+        &#34;dilution_fraction&#34;: dilution,
+        &#34;geochem_base&#34;: geochem_base,
+        &#34;geochem_trace_final&#34;: geochem_trace_final,
+        &#34;geochem_trace_stock&#34;: geochem_trace_stock,
+        &#34;base_result&#34;: res_b,
+        &#34;trace_result&#34;: res_t,
+        &#34;all_ions&#34;: all_ions_b,
+        &#34;ions_base_final&#34;: ions_base_final,
+        &#34;ions_trace_stock&#34;: ions_trace_stock,
+        &#34;ions_trace_final&#34;: ions_trace_final,
+        &#34;ions_total_final&#34;: ions_total_final,
+    }
+
+    return base_df, trace_stock_df, ions_total_df, meta</code></pre>
+</details>
+<div class="desc"><p>Generate a two-part media recipe consisting of a base medium and a trace stock.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>reagents</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Reagent definition dictionary in the standard nested format expected by
+<code><a title="media_design.recipe_maker.solve_media_lp" href="#media_design.recipe_maker.solve_media_lp">solve_media_lp()</a></code>.</dd>
+<dt><strong><code>geochem_dict</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Full target ion composition dictionary mapping ion names to final target
+concentrations.</dd>
+<dt><strong><code>trace_threshold</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Concentration threshold used to classify ions as trace when
+<code>trace_ions</code> is not provided. Default is 1e-6.</dd>
+<dt><strong><code>trace_ions</code></strong> :&ensp;<code>list</code> of <code>str</code> or <code>None</code>, optional</dt>
+<dd>Explicit list of ions to classify as trace. If provided and non-empty,
+this overrides threshold-based classification. Default is None.</dd>
+<dt><strong><code>trace_stock_mL_per_L</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Trace stock addition volume in mL per L of final medium. Used to convert
+final trace targets into stock concentrations. For example, 1 mL/L
+corresponds to a 1000× stock. Default is 1.0.</dd>
+<dt><strong><code>enforce_trace_hardmin</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, apply hard-minimum constraints to trace ions in the trace stock
+solve. Default is True.</dd>
+<dt><strong><code>reagent_cutoff_g_L</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Minimum reagent concentration in g/L required for inclusion in the
+output reagent tables. Reagents at or below this threshold are omitted
+from the returned recipe DataFrames. Default is 0.0.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>tuple</code></dt>
+<dd>
+<p>Tuple containing:</p>
+<ul>
+<li>
+<p>base_df : pandas.DataFrame
+Base-medium reagent recipe with columns:</p>
+<ul>
+<li>'reagent'</li>
+<li>'mmol_per_L_final'</li>
+<li>'g_per_L_final'</li>
+</ul>
+</li>
+<li>
+<p>trace_stock_df : pandas.DataFrame
+Trace-stock reagent recipe with columns:</p>
+<ul>
+<li>'reagent'</li>
+<li>'mmol_per_L_stock'</li>
+<li>'g_per_L_stock'</li>
+</ul>
+</li>
+<li>
+<p>ions_total_df : pandas.DataFrame
+Combined ion concentrations in the final medium with columns:</p>
+<ul>
+<li>'ion'</li>
+<li>'base_mmol_L_final'</li>
+<li>'trace_mmol_L_final'</li>
+<li>'total_mmol_L_final'</li>
+<li>'target_mmol_L_final'</li>
+</ul>
+</li>
+<li>
+<p>meta : dict
+Dictionary of metadata and raw solver outputs, including:</p>
+<ul>
+<li>stock and dilution factors</li>
+<li>base and trace target dictionaries</li>
+<li>solver result objects</li>
+<li>ion contribution arrays</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>A stock made at <code>trace_stock_mL_per_L = 1.0</code> mL/L is treated as a 1000×
+stock.</li>
+<li>Base ions are solved directly at final media concentrations.</li>
+<li>Trace ions are solved at stock concentrations, then scaled back into final
+media contributions.</li>
+<li>Reagent masses are reported in g/L using reagent molar masses.</li>
+<li>Reagent rows can be filtered from the output tables using
+<code>reagent_cutoff_g_L</code>.</li>
+<li>The function assumes that base and trace solves produce the same
+<code>all_ions</code> ordering because both are derived from the same reagent set.</li>
+</ul></div>
+</dd>
+<dt id="media_design.recipe_maker.solve_media_lp"><code class="name flex">
+<span>def <span class="ident">solve_media_lp</span></span>(<span>reagents: dict,<br>geochemical_data,<br>*,<br>trace_elements: set | None = None,<br>hard_min_ions: set | None = None,<br>settings: dict | None = None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_media_lp(
+    reagents: dict,
+    geochemical_data,
+    *,
+    trace_elements: set | None = None,
+    hard_min_ions: set | None = None,
+    settings: dict | None = None,
+):
+    &#34;&#34;&#34;
+    Solve the media formulation problem as a linear program with under- and over-shoot slack.
+
+    Parameters
+    ----------
+    reagents : dict
+        Reagent definition dictionary in the standard format:
+
+        .. code-block:: python
+
+            {
+                &#34;NaCl&#34;: {
+                    &#34;ions&#34;: {&#34;Na+&#34;: 1, &#34;Cl-&#34;: 1},
+                    &#34;molar_mass&#34;: 58.44
+                },
+                ...
+            }
+
+        Each reagent must include:
+        - &#39;ions&#39; : dict mapping ion names to stoichiometric coefficients
+        - &#39;molar_mass&#39; : reagent molar mass in g/mol
+    geochemical_data : dict or str
+        Target ion concentrations. Supported inputs are:
+
+        - dict mapping ion names to target concentrations
+        - path to a CSV file containing either:
+          - &#39;ion&#39; and &#39;concentration&#39; columns, or
+          - columns whose names contain &#39;(Molality)&#39;, with concentrations in
+            the first row
+    trace_elements : set or None, optional
+        Set of ions to treat as trace elements. Trace ions receive stronger
+        under- and over-shoot penalties according to the active settings.
+        Default is None.
+    hard_min_ions : set or None, optional
+        Set of ions for which a minimum fraction of the target concentration
+        must be achieved. The required minimum fraction is controlled by
+        `settings[&#34;hard_min_frac&#34;]`. Default is None.
+    settings : dict or None, optional
+        Optional dictionary of solver settings that override internal defaults.
+        Supported keys include:
+
+        - &#39;penalty_over_trace&#39;
+        - &#39;penalty_over_nontrace&#39;
+        - &#39;penalty_under_trace&#39;
+        - &#39;penalty_under_nontrace&#39;
+        - &#39;hard_min_frac&#39;
+        - &#39;penalty_offtarget&#39;
+
+        Any omitted keys fall back to `_DEFAULTS`.
+
+    Returns
+    -------
+    tuple
+        Tuple containing:
+
+        - res : scipy.optimize.OptimizeResult
+            Result object returned by `scipy.optimize.linprog`
+        - all_ions : list of str
+            All ions represented across the reagent set
+        - target_ions : list of str
+            Target ions present in `geochemical_data`
+        - A : numpy.ndarray
+            Full stoichiometric matrix with rows as ions and columns as reagents
+        - target_idx : list of int
+            Indices of target ions within `all_ions`
+        - offtarget_idx : list of int
+            Indices of non-target ions within `all_ions`
+        - reagent_names : list of str
+            Ordered list of reagent names corresponding to matrix columns
+
+    Notes
+    -----
+    - Reagent variables are constrained to be nonnegative.
+    - Undershoot and overshoot are handled with separate slack variables,
+      allowing asymmetric penalties.
+    - Off-target ions are penalized indirectly through reagent costs when a
+      reagent contributes ions not present in the target solution.
+    - Trace elements can be penalized much more strongly than non-trace ions.
+    - Hard minimum constraints require certain ions to reach at least a fixed
+      fraction of their target value.
+    &#34;&#34;&#34;
+
+    if isinstance(geochemical_data, str):
+        df = pd.read_csv(geochemical_data)
+    
+        # Case 1: ion / concentration format
+        if {&#34;ion&#34;, &#34;concentration&#34;}.issubset(df.columns):
+            geochemical_data = dict(
+                zip(df[&#34;ion&#34;].astype(str), pd.to_numeric(df[&#34;concentration&#34;], errors=&#34;coerce&#34;))
+            )
+    
+        # Case 2: formatted_df style (Molality columns)
+        else:
+            ion_cols = [c for c in df.columns if &#34;(Molality)&#34; in c]
+    
+            geochemical_data = {
+                c.split()[0]: float(df.iloc[0][c])
+                for c in ion_cols
+                if pd.notnull(df.iloc[0][c])
+        }
+
+    if trace_elements is None:
+        trace_elements = set()
+    if hard_min_ions is None:
+        hard_min_ions = set()
+
+    cfg = dict(_DEFAULTS)
+    if settings:
+        cfg.update(settings)
+
+    # Build list of all ions from reagents
+    all_ions: list[str] = []
+    for r_data in reagents.values():
+        for ion in r_data[&#34;ions&#34;].keys():
+            if ion not in all_ions:
+                all_ions.append(ion)
+
+    target_ions = list(geochemical_data.keys())
+
+    missing_ions = [ion for ion in target_ions if ion not in all_ions]
+    if missing_ions:
+        raise ValueError(f&#34;Missing ion coverage for: {&#39;, &#39;.join(missing_ions)}&#34;)
+
+    reagent_names = list(reagents.keys())
+    A = np.array(
+        [[reagents[r][&#34;ions&#34;].get(ion, 0.0) for r in reagent_names] for ion in all_ions],
+        dtype=float,
+    )
+
+    target_idx = [all_ions.index(i) for i in target_ions]
+    offtarget_idx = [i for i in range(len(all_ions)) if i not in target_idx]
+
+    A_target = A[target_idx]
+    b_target = np.array([geochemical_data[i] for i in target_ions], dtype=float)
+
+    n_reagents = A.shape[1]
+    n_targets = len(target_ions)
+
+    # Variables: [x, s_under, s_over]
+    # Undershoot: A x + s_under &gt;= b -&gt; -(A x + s_under) &lt;= -b
+    A_under = np.hstack([-A_target, -np.eye(n_targets), np.zeros((n_targets, n_targets))])
+    b_under = -b_target
+
+    # Overshoot: A x - s_over &lt;= b
+    A_over = np.hstack([A_target, np.zeros((n_targets, n_targets)), -np.eye(n_targets)])
+    b_over = b_target
+
+    A_ub = np.vstack([A_under, A_over])
+    b_ub = np.concatenate([b_under, b_over])
+
+    # Hard minimums: A_hard x &gt;= frac*b_hard -&gt; -A_hard x &lt;= -frac*b_hard
+    if hard_min_ions:
+        hard_list = [ion for ion in target_ions if ion in hard_min_ions]
+        if hard_list:
+            hard_rows = [target_ions.index(ion) for ion in hard_list]
+            A_hard = A_target[hard_rows]
+            b_hard = b_target[hard_rows] * float(cfg[&#34;hard_min_frac&#34;])
+
+            A_hard_full = np.hstack(
+                [
+                    -A_hard,
+                    np.zeros((len(hard_rows), n_targets)),
+                    np.zeros((len(hard_rows), n_targets)),
+                ]
+            )
+            b_hard_full = -b_hard
+            A_ub = np.vstack([A_ub, A_hard_full])
+            b_ub = np.concatenate([b_ub, b_hard_full])
+
+    # Base reagent cost (minimize total mass)
+    base_cost = np.array(
+        [reagents[r][&#34;molar_mass&#34;] for r in reagent_names],
+        dtype=float
+    )
+    # Penalize reagents that generate ions not present in the target solution.
+    off_penalty = float(cfg.get(&#34;penalty_offtarget&#34;, 1e8))  # default strong penalty
+
+    if offtarget_idx:
+        # mmol of off-target ions produced per mmol reagent
+        off_per_reagent = A[offtarget_idx, :].sum(axis=0)
+    else:
+        off_per_reagent = np.zeros(n_reagents, dtype=float)
+
+    # Add penalty directly into objective coefficient
+    base_cost = base_cost + off_penalty * off_per_reagent
+
+    
+    under_penalty = np.array(
+        [
+            cfg[&#34;penalty_under_trace&#34;] if ion in trace_elements else cfg[&#34;penalty_under_nontrace&#34;]
+            for ion in target_ions
+        ],
+        dtype=float,
+    )
+    over_penalty = np.array(
+        [
+            cfg[&#34;penalty_over_trace&#34;] if ion in trace_elements else cfg[&#34;penalty_over_nontrace&#34;]
+            for ion in target_ions
+        ],
+        dtype=float,
+    )
+
+    c = np.concatenate([base_cost, under_penalty, over_penalty])
+    bounds = [(0, None)] * (n_reagents + 2 * n_targets)
+
+    res = linprog(c, A_ub=A_ub, b_ub=b_ub, bounds=bounds, method=&#34;highs&#34;)
+
+    return res, all_ions, target_ions, A, target_idx, offtarget_idx, reagent_names</code></pre>
+</details>
+<div class="desc"><p>Solve the media formulation problem as a linear program with under- and over-shoot slack.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>reagents</code></strong> :&ensp;<code>dict</code></dt>
+<dd>
+<p>Reagent definition dictionary in the standard format:</p>
+<p>.. code-block:: python</p>
+<pre><code>{
+    "NaCl": {
+        "ions": {"Na+": 1, "Cl-": 1},
+        "molar_mass": 58.44
+    },
+    ...
+}
+</code></pre>
+<p>Each reagent must include:
+- 'ions' : dict mapping ion names to stoichiometric coefficients
+- 'molar_mass' : reagent molar mass in g/mol</p>
+</dd>
+<dt><strong><code>geochemical_data</code></strong> :&ensp;<code>dict</code> or <code>str</code></dt>
+<dd>
+<p>Target ion concentrations. Supported inputs are:</p>
+<ul>
+<li>dict mapping ion names to target concentrations</li>
+<li>path to a CSV file containing either:</li>
+<li>'ion' and 'concentration' columns, or</li>
+<li>columns whose names contain '(Molality)', with concentrations in
+the first row</li>
+</ul>
+</dd>
+<dt><strong><code>trace_elements</code></strong> :&ensp;<code>set</code> or <code>None</code>, optional</dt>
+<dd>Set of ions to treat as trace elements. Trace ions receive stronger
+under- and over-shoot penalties according to the active settings.
+Default is None.</dd>
+<dt><strong><code>hard_min_ions</code></strong> :&ensp;<code>set</code> or <code>None</code>, optional</dt>
+<dd>Set of ions for which a minimum fraction of the target concentration
+must be achieved. The required minimum fraction is controlled by
+<code>settings["hard_min_frac"]</code>. Default is None.</dd>
+<dt><strong><code>settings</code></strong> :&ensp;<code>dict</code> or <code>None</code>, optional</dt>
+<dd>
+<p>Optional dictionary of solver settings that override internal defaults.
+Supported keys include:</p>
+<ul>
+<li>'penalty_over_trace'</li>
+<li>'penalty_over_nontrace'</li>
+<li>'penalty_under_trace'</li>
+<li>'penalty_under_nontrace'</li>
+<li>'hard_min_frac'</li>
+<li>'penalty_offtarget'</li>
+</ul>
+<p>Any omitted keys fall back to <code>_DEFAULTS</code>.</p>
+</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>tuple</code></dt>
+<dd>
+<p>Tuple containing:</p>
+<ul>
+<li>res : scipy.optimize.OptimizeResult
+Result object returned by <code>scipy.optimize.linprog</code></li>
+<li>all_ions : list of str
+All ions represented across the reagent set</li>
+<li>target_ions : list of str
+Target ions present in <code>geochemical_data</code></li>
+<li>A : numpy.ndarray
+Full stoichiometric matrix with rows as ions and columns as reagents</li>
+<li>target_idx : list of int
+Indices of target ions within <code>all_ions</code></li>
+<li>offtarget_idx : list of int
+Indices of non-target ions within <code>all_ions</code></li>
+<li>reagent_names : list of str
+Ordered list of reagent names corresponding to matrix columns</li>
+</ul>
+</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Reagent variables are constrained to be nonnegative.</li>
+<li>Undershoot and overshoot are handled with separate slack variables,
+allowing asymmetric penalties.</li>
+<li>Off-target ions are penalized indirectly through reagent costs when a
+reagent contributes ions not present in the target solution.</li>
+<li>Trace elements can be penalized much more strongly than non-trace ions.</li>
+<li>Hard minimum constraints require certain ions to reach at least a fixed
+fraction of their target value.</li>
+</ul></div>
+</dd>
+<dt id="media_design.recipe_maker.solve_two_recipe_media"><code class="name flex">
+<span>def <span class="ident">solve_two_recipe_media</span></span>(<span>reagents: dict,<br>geochem_dict: dict[str, float],<br>*,<br>trace_threshold: float = 1e-06,<br>trace_ions: list[str] | None = None,<br>enforce_trace_hardmin: bool = True)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_two_recipe_media(
+    reagents: dict,
+    geochem_dict: dict[str, float],
+    *,
+    trace_threshold: float = 1e-6,
+    trace_ions: list[str] | None = None,  # [] =&gt; threshold mode
+    enforce_trace_hardmin: bool = True,
+):
+    &#34;&#34;&#34;
+    Solve separate linear programs for base-media and trace-media targets.
+
+    Parameters
+    ----------
+    reagents : dict
+        Reagent definition dictionary in the standard nested format expected by
+        `solve_media_lp`.
+    geochem_dict : dict of {str : float}
+        Full target ion composition dictionary.
+    trace_threshold : float, optional
+        Concentration threshold used to separate trace ions from base ions when
+        `trace_ions` is not provided. Default is 1e-6.
+    trace_ions : list of str or None, optional
+        Explicit list of ions to classify as trace. If provided and non-empty,
+        this overrides threshold-based classification. Default is None.
+    enforce_trace_hardmin : bool, optional
+        If True, require trace ions to meet the hard-minimum fraction in the
+        trace solve. Default is True.
+
+    Returns
+    -------
+    dict
+        Dictionary containing:
+
+        - &#39;geochem_base&#39; : dict
+            Base ion targets
+        - &#39;geochem_trace&#39; : dict
+            Trace ion targets
+        - &#39;base&#39; : tuple
+            Output tuple returned by `solve_media_lp` for the base solve
+        - &#39;trace&#39; : tuple
+            Output tuple returned by `solve_media_lp` for the trace solve
+
+    Notes
+    -----
+    - The base solve treats ions as standard targets with default penalties.
+    - The trace solve marks all trace ions as `trace_elements` so that trace
+      penalties are applied.
+    - This function does not scale trace targets into a stock solution; it
+      simply solves two independent target sets.
+    &#34;&#34;&#34;
+    
+    geochem_base, geochem_trace = split_geochem_targets(
+        geochem_dict,
+        trace_threshold=trace_threshold,
+        trace_ions=trace_ions,
+    )
+
+    base_pack = solve_media_lp(reagents, geochem_base)
+
+    hardmins = set(geochem_trace.keys()) if enforce_trace_hardmin else set()
+    trace_pack = solve_media_lp(
+        reagents,
+        geochem_trace,
+        trace_elements=set(geochem_trace.keys()),
+        hard_min_ions=hardmins,
+    )
+
+    return {
+        &#34;geochem_base&#34;: geochem_base,
+        &#34;geochem_trace&#34;: geochem_trace,
+        &#34;base&#34;: base_pack,
+        &#34;trace&#34;: trace_pack,
+    }</code></pre>
+</details>
+<div class="desc"><p>Solve separate linear programs for base-media and trace-media targets.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>reagents</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Reagent definition dictionary in the standard nested format expected by
+<code><a title="media_design.recipe_maker.solve_media_lp" href="#media_design.recipe_maker.solve_media_lp">solve_media_lp()</a></code>.</dd>
+<dt><strong><code>geochem_dict</code></strong> :&ensp;<code>dict</code> of <code>{str : float}</code></dt>
+<dd>Full target ion composition dictionary.</dd>
+<dt><strong><code>trace_threshold</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Concentration threshold used to separate trace ions from base ions when
+<code>trace_ions</code> is not provided. Default is 1e-6.</dd>
+<dt><strong><code>trace_ions</code></strong> :&ensp;<code>list</code> of <code>str</code> or <code>None</code>, optional</dt>
+<dd>Explicit list of ions to classify as trace. If provided and non-empty,
+this overrides threshold-based classification. Default is None.</dd>
+<dt><strong><code>enforce_trace_hardmin</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, require trace ions to meet the hard-minimum fraction in the
+trace solve. Default is True.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>
+<p>Dictionary containing:</p>
+<ul>
+<li>'geochem_base' : dict
+Base ion targets</li>
+<li>'geochem_trace' : dict
+Trace ion targets</li>
+<li>'base' : tuple
+Output tuple returned by <code><a title="media_design.recipe_maker.solve_media_lp" href="#media_design.recipe_maker.solve_media_lp">solve_media_lp()</a></code> for the base solve</li>
+<li>'trace' : tuple
+Output tuple returned by <code><a title="media_design.recipe_maker.solve_media_lp" href="#media_design.recipe_maker.solve_media_lp">solve_media_lp()</a></code> for the trace solve</li>
+</ul>
+</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The base solve treats ions as standard targets with default penalties.</li>
+<li>The trace solve marks all trace ions as <code>trace_elements</code> so that trace
+penalties are applied.</li>
+<li>This function does not scale trace targets into a stock solution; it
+simply solves two independent target sets.</li>
+</ul></div>
+</dd>
+<dt id="media_design.recipe_maker.split_geochem_targets"><code class="name flex">
+<span>def <span class="ident">split_geochem_targets</span></span>(<span>geochem_dict: dict[str, float],<br>*,<br>trace_threshold: float = 1e-06,<br>trace_ions: list[str] | None = None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def split_geochem_targets(
+    geochem_dict: dict[str, float],
+    *,
+    trace_threshold: float = 1e-6,
+    trace_ions: list[str] | None = None,
+):
+    &#34;&#34;&#34;
+    Split geochemical target ions into base and trace groups.
+
+    Parameters
+    ----------
+    geochem_dict : dict of {str : float}
+        Dictionary mapping ion names to target concentrations.
+    trace_threshold : float, optional
+        Concentration threshold used to classify ions as trace when
+        `trace_ions` is not provided. Ions with concentrations less than or
+        equal to this threshold are placed in the trace dictionary. Default is
+        1e-6.
+    trace_ions : list of str or None, optional
+        Explicit list of ions to classify as trace. If provided and non-empty,
+        this list overrides threshold-based classification. Default is None.
+
+    Returns
+    -------
+    tuple
+        Tuple containing:
+
+        - base : dict
+            Dictionary of non-trace ion targets
+        - trace : dict
+            Dictionary of trace ion targets
+
+    Notes
+    -----
+    - Explicit `trace_ions` takes precedence over threshold-based splitting.
+    - Output values are converted to float.
+    - Ions equal to the threshold are classified as trace.
+    &#34;&#34;&#34;
+    
+    if trace_ions is not None and len(trace_ions) &gt; 0:
+        trace_set = set(trace_ions)
+        base = {ion: float(v) for ion, v in geochem_dict.items() if ion not in trace_set}
+        trace = {ion: float(v) for ion, v in geochem_dict.items() if ion in trace_set}
+        return base, trace
+
+    base, trace = {}, {}
+    thr = float(trace_threshold)
+    for ion, v in geochem_dict.items():
+        v = float(v)
+        (trace if v &lt;= thr else base)[ion] = v
+    return base, trace</code></pre>
+</details>
+<div class="desc"><p>Split geochemical target ions into base and trace groups.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>geochem_dict</code></strong> :&ensp;<code>dict</code> of <code>{str : float}</code></dt>
+<dd>Dictionary mapping ion names to target concentrations.</dd>
+<dt><strong><code>trace_threshold</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Concentration threshold used to classify ions as trace when
+<code>trace_ions</code> is not provided. Ions with concentrations less than or
+equal to this threshold are placed in the trace dictionary. Default is
+1e-6.</dd>
+<dt><strong><code>trace_ions</code></strong> :&ensp;<code>list</code> of <code>str</code> or <code>None</code>, optional</dt>
+<dd>Explicit list of ions to classify as trace. If provided and non-empty,
+this list overrides threshold-based classification. Default is None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>tuple</code></dt>
+<dd>
+<p>Tuple containing:</p>
+<ul>
+<li>base : dict
+Dictionary of non-trace ion targets</li>
+<li>trace : dict
+Dictionary of trace ion targets</li>
+</ul>
+</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Explicit <code>trace_ions</code> takes precedence over threshold-based splitting.</li>
+<li>Output values are converted to float.</li>
+<li>Ions equal to the threshold are classified as trace.</li>
+</ul></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="media_design" href="index.html">media_design</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="media_design.recipe_maker.create_recipe" href="#media_design.recipe_maker.create_recipe">create_recipe</a></code></li>
+<li><code><a title="media_design.recipe_maker.solve_media_lp" href="#media_design.recipe_maker.solve_media_lp">solve_media_lp</a></code></li>
+<li><code><a title="media_design.recipe_maker.solve_two_recipe_media" href="#media_design.recipe_maker.solve_two_recipe_media">solve_two_recipe_media</a></code></li>
+<li><code><a title="media_design.recipe_maker.split_geochem_targets" href="#media_design.recipe_maker.split_geochem_targets">split_geochem_targets</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>

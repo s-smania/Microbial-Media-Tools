@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>media_design.gas_dissolution API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>media_design.gas_dissolution</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="media_design.gas_dissolution.dissolved_gases_from_headspace"><code class="name flex">
+<span>def <span class="ident">dissolved_gases_from_headspace</span></span>(<span>headspace_x: dict[str, float],<br>*,<br>T_C: float,<br>P_total_bar: float = 1.0,<br>assume_wet_headspace: bool = True,<br>molar_masses_g_per_mol: dict[str, float] | None = None) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dissolved_gases_from_headspace(
+    headspace_x: dict[str, float],
+    *,
+    T_C: float,
+    P_total_bar: float = 1.0,
+    assume_wet_headspace: bool = True,
+    molar_masses_g_per_mol: dict[str, float] | None = None,
+) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Convert gas-phase mole fractions in a headspace to dissolved gas concentrations.
+
+    Parameters
+    ----------
+    headspace_x : dict of {str : float}
+        Dictionary mapping gas names to headspace mole fractions.
+    T_C : float
+        Temperature in degrees Celsius.
+    P_total_bar : float, optional
+        Total headspace pressure in bar. Default is 1.0.
+    assume_wet_headspace : bool, optional
+        If True, subtract water vapor pressure from total pressure to obtain
+        dry gas pressure. If False, water vapor pressure is ignored. Default
+        is True.
+    molar_masses_g_per_mol : dict of {str : float} or None, optional
+        Dictionary of molar masses for conversion from molar concentration to
+        mg/L. If None, `mg_per_L` is reported as NaN. Default is None.
+
+    Returns
+    -------
+    pandas.DataFrame
+        DataFrame sorted by gas name containing the following columns:
+
+        - gas : str
+            Gas species name.
+        - x : float
+            Input mole fraction.
+        - P_total_bar : float
+            Total headspace pressure.
+        - P_H2O_bar : float
+            Water vapor pressure at the specified temperature.
+        - P_dry_bar : float
+            Dry gas pressure after subtracting water vapor pressure.
+        - f_bar : float
+            Gas fugacity, approximated as mole fraction × dry pressure.
+        - logK : float
+            Equilibrium constant for gas dissolution.
+        - log_a : float
+            Log activity of dissolved gas.
+        - a : float
+            Dissolved gas activity.
+        - M_molar : float
+            Dissolved concentration assuming M ≈ m ≈ a.
+        - mmol_per_L : float
+            Dissolved concentration in mmol/L.
+        - mg_per_L : float
+            Dissolved concentration in mg/L when molar mass is available.
+
+    Raises
+    ------
+    ValueError
+        If any mole fraction is negative or if the total mole fraction sum
+        is zero or less.
+
+    Assumptions
+    -----------
+    - Wet headspace by default:
+      P_dry = P_total - P_H2O(T)
+    - Ideal fugacity approximation:
+      f_i ≈ x_i × P_dry
+    - Dilute solution:
+      a ≈ m
+    - Simplified conversion:
+      M ≈ m, so mol/L ≈ mol/kg
+
+    Notes
+    -----
+    For gases with fugacity less than or equal to zero, concentration-related
+    outputs are returned as NaN and `log_a` is returned as `-inf`.
+    &#34;&#34;&#34;
+    # validate
+    for g, x in headspace_x.items():
+        if x &lt; 0:
+            raise ValueError(f&#34;Negative mole fraction for {g}: {x}&#34;)
+    if sum(headspace_x.values()) &lt;= 0:
+        raise ValueError(&#34;Headspace composition sums to 0.&#34;)
+
+    P_H2O = vapor_pressure_H2O_bar(T_C) if assume_wet_headspace else 0.0
+    P_dry = max(P_total_bar - P_H2O, 0.0)
+
+    rows = []
+    for gas, x in headspace_x.items():
+        f = float(x) * P_dry  # bar
+        if f &lt;= 0:
+            rows.append(
+                dict(
+                    gas=gas, x=float(x),
+                    P_total_bar=float(P_total_bar),
+                    P_H2O_bar=float(P_H2O),
+                    P_dry_bar=float(P_dry),
+                    f_bar=float(f),
+                    logK=np.nan,
+                    log_a=-np.inf,
+                    a=np.nan,
+                    M_molar=np.nan,
+                    mmol_per_L=np.nan,
+                    mg_per_L=np.nan,
+                )
+            )
+            continue
+
+        logK = logK_gas_to_aq(gas, T_C, P_total_bar)
+        log_a = logK + np.log10(f)
+        a = 10 ** log_a
+
+        # simplified: M ≈ m ≈ a
+        M = a
+        mmol_L = M * 1e3
+
+        mg_L = np.nan
+        if molar_masses_g_per_mol is not None and gas in molar_masses_g_per_mol:
+            mg_L = M * molar_masses_g_per_mol[gas] * 1e3  # g/L -&gt; mg/L
+
+        rows.append(
+            dict(
+                gas=gas, x=float(x),
+                P_total_bar=float(P_total_bar),
+                P_H2O_bar=float(P_H2O),
+                P_dry_bar=float(P_dry),
+                f_bar=float(f),
+                logK=float(logK),
+                log_a=float(log_a),
+                a=float(a),
+                M_molar=float(M),
+                mmol_per_L=float(mmol_L),
+                mg_per_L=float(mg_L) if np.isfinite(mg_L) else np.nan,
+            )
+        )
+
+    return pd.DataFrame(rows).sort_values(&#34;gas&#34;).reset_index(drop=True)</code></pre>
+</details>
+<div class="desc"><p>Convert gas-phase mole fractions in a headspace to dissolved gas concentrations.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>headspace_x</code></strong> :&ensp;<code>dict</code> of <code>{str : float}</code></dt>
+<dd>Dictionary mapping gas names to headspace mole fractions.</dd>
+<dt><strong><code>T_C</code></strong> :&ensp;<code>float</code></dt>
+<dd>Temperature in degrees Celsius.</dd>
+<dt><strong><code>P_total_bar</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Total headspace pressure in bar. Default is 1.0.</dd>
+<dt><strong><code>assume_wet_headspace</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, subtract water vapor pressure from total pressure to obtain
+dry gas pressure. If False, water vapor pressure is ignored. Default
+is True.</dd>
+<dt><strong><code>molar_masses_g_per_mol</code></strong> :&ensp;<code>dict</code> of <code>{str : float}</code> or <code>None</code>, optional</dt>
+<dd>Dictionary of molar masses for conversion from molar concentration to
+mg/L. If None, <code>mg_per_L</code> is reported as NaN. Default is None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>
+<p>DataFrame sorted by gas name containing the following columns:</p>
+<ul>
+<li>gas : str
+Gas species name.</li>
+<li>x : float
+Input mole fraction.</li>
+<li>P_total_bar : float
+Total headspace pressure.</li>
+<li>P_H2O_bar : float
+Water vapor pressure at the specified temperature.</li>
+<li>P_dry_bar : float
+Dry gas pressure after subtracting water vapor pressure.</li>
+<li>f_bar : float
+Gas fugacity, approximated as mole fraction × dry pressure.</li>
+<li>logK : float
+Equilibrium constant for gas dissolution.</li>
+<li>log_a : float
+Log activity of dissolved gas.</li>
+<li>a : float
+Dissolved gas activity.</li>
+<li>M_molar : float
+Dissolved concentration assuming M ≈ m ≈ a.</li>
+<li>mmol_per_L : float
+Dissolved concentration in mmol/L.</li>
+<li>mg_per_L : float
+Dissolved concentration in mg/L when molar mass is available.</li>
+</ul>
+</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If any mole fraction is negative or if the total mole fraction sum
+is zero or less.</dd>
+</dl>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>Wet headspace by default:
+P_dry = P_total - P_H2O(T)</li>
+<li>Ideal fugacity approximation:
+f_i ≈ x_i × P_dry</li>
+<li>Dilute solution:
+a ≈ m</li>
+<li>Simplified conversion:
+M ≈ m, so mol/L ≈ mol/kg</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>For gases with fugacity less than or equal to zero, concentration-related
+outputs are returned as NaN and <code>log_a</code> is returned as <code>-inf</code>.</p></div>
+</dd>
+<dt id="media_design.gas_dissolution.headspace_from_dissolved_target"><code class="name flex">
+<span>def <span class="ident">headspace_from_dissolved_target</span></span>(<span>targets: dict[str, float],<br>*,<br>units: str,<br>T_C: float,<br>P_total_bar: float = 1.0,<br>assume_wet_headspace: bool = True,<br>molar_masses_g_per_mol: dict[str, float] | None = None) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def headspace_from_dissolved_target(
+    targets: dict[str, float],
+    *,
+    units: str,
+    T_C: float,
+    P_total_bar: float = 1.0,
+    assume_wet_headspace: bool = True,
+    molar_masses_g_per_mol: dict[str, float] | None = None,
+) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Calculate required headspace fugacity and mole fraction for target dissolved gases.
+
+    Parameters
+    ----------
+    targets : dict of {str : float}
+        Dictionary mapping gas names to target dissolved values.
+    units : {&#34;molality&#34;, &#34;ppm&#34;, &#34;fugacity&#34;}
+        Units of the input target values.
+        - &#34;molality&#34;: target values are treated as mol/kg
+        - &#34;ppm&#34;: target values are treated as mg/L-equivalent and converted
+          to molality using supplied molar masses
+        - &#34;fugacity&#34;: target values are treated directly as fugacity in bar
+    T_C : float
+        Temperature in degrees Celsius.
+    P_total_bar : float, optional
+        Total headspace pressure in bar. Default is 1.0.
+    assume_wet_headspace : bool, optional
+        If True, subtract water vapor pressure from total pressure to obtain
+        dry gas pressure. If False, water vapor pressure is ignored. Default
+        is True.
+    molar_masses_g_per_mol : dict of {str : float} or None, optional
+        Dictionary of molar masses used when `units=&#34;ppm&#34;`. If None, the
+        module-level `MM` dictionary is used. Default is None.
+
+    Returns
+    -------
+    pandas.DataFrame
+        DataFrame sorted by gas name containing the following columns:
+
+        - gas : str
+            Gas species name.
+        - target_input : float
+            Original target value supplied by the user.
+        - molality : float
+            Target converted to molality when applicable.
+        - required_f_bar : float
+            Required fugacity in bar.
+        - required_x : float
+            Required headspace mole fraction based on dry gas pressure.
+
+    Assumptions
+    -----------
+    - Wet headspace by default:
+      P_dry = P_total - P_H2O(T)
+    - Ideal fugacity approximation:
+      f_i ≈ x_i × P_dry
+    - Dilute solution:
+      a ≈ m
+
+    Notes
+    -----
+    - For `units=&#34;fugacity&#34;`, the input is used directly and no equilibrium
+      conversion is performed.
+    - For `units=&#34;molality&#34;` and `units=&#34;ppm&#34;`, the required fugacity is
+      calculated from:
+      log_f = log_a - logK
+    - Scientific notation inputs are supported as long as they are valid
+      numeric values.
+    &#34;&#34;&#34;
+    if units not in {&#34;molality&#34;, &#34;ppm&#34;, &#34;fugacity&#34;}:
+        raise ValueError(&#34;units must be &#39;molality&#39;, &#39;ppm&#39;, or &#39;fugacity&#39;&#34;)
+
+    if molar_masses_g_per_mol is None:
+        molar_masses_g_per_mol = MM
+
+    P_H2O = vapor_pressure_H2O_bar(T_C) if assume_wet_headspace else 0.0
+    P_dry = max(P_total_bar - P_H2O, 0.0)
+
+    rows = []
+
+    for gas, val in targets.items():
+
+        # Convert input → fugacity
+
+        if units == &#34;fugacity&#34;:
+
+            f = float(val)
+            m = np.nan
+            logK = np.nan
+
+        else:
+
+            if units == &#34;molality&#34;:
+                m = float(val)
+
+            else:  # ppm
+                if gas not in molar_masses_g_per_mol:
+                    raise KeyError(f&#34;Molar mass not defined for {gas}&#34;)
+                M_g = molar_masses_g_per_mol[gas]
+                m = float(val) / (M_g * 1e3)
+
+            logK = logK_gas_to_aq(gas, T_C, P_total_bar)
+
+            log_a = np.log10(m)
+            log_f = log_a - logK
+            f = 10 ** log_f
+
+        # Convert fugacity → mole fraction
+
+        x = f / P_dry if P_dry &gt; 0 else np.nan
+
+        rows.append(
+            dict(
+                gas=gas,
+                target_input=float(val),
+                molality=float(m) if np.isfinite(m) else np.nan,
+                required_f_bar=float(f),
+                required_x=float(x),
+            )
+        )
+
+    return pd.DataFrame(rows).sort_values(&#34;gas&#34;).reset_index(drop=True)</code></pre>
+</details>
+<div class="desc"><p>Calculate required headspace fugacity and mole fraction for target dissolved gases.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>targets</code></strong> :&ensp;<code>dict</code> of <code>{str : float}</code></dt>
+<dd>Dictionary mapping gas names to target dissolved values.</dd>
+<dt><strong><code>units</code></strong> :&ensp;<code>{"molality", "ppm", "fugacity"}</code></dt>
+<dd>Units of the input target values.
+- "molality": target values are treated as mol/kg
+- "ppm": target values are treated as mg/L-equivalent and converted
+to molality using supplied molar masses
+- "fugacity": target values are treated directly as fugacity in bar</dd>
+<dt><strong><code>T_C</code></strong> :&ensp;<code>float</code></dt>
+<dd>Temperature in degrees Celsius.</dd>
+<dt><strong><code>P_total_bar</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Total headspace pressure in bar. Default is 1.0.</dd>
+<dt><strong><code>assume_wet_headspace</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, subtract water vapor pressure from total pressure to obtain
+dry gas pressure. If False, water vapor pressure is ignored. Default
+is True.</dd>
+<dt><strong><code>molar_masses_g_per_mol</code></strong> :&ensp;<code>dict</code> of <code>{str : float}</code> or <code>None</code>, optional</dt>
+<dd>Dictionary of molar masses used when <code>units="ppm"</code>. If None, the
+module-level <code>MM</code> dictionary is used. Default is None.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>
+<p>DataFrame sorted by gas name containing the following columns:</p>
+<ul>
+<li>gas : str
+Gas species name.</li>
+<li>target_input : float
+Original target value supplied by the user.</li>
+<li>molality : float
+Target converted to molality when applicable.</li>
+<li>required_f_bar : float
+Required fugacity in bar.</li>
+<li>required_x : float
+Required headspace mole fraction based on dry gas pressure.</li>
+</ul>
+</dd>
+</dl>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>Wet headspace by default:
+P_dry = P_total - P_H2O(T)</li>
+<li>Ideal fugacity approximation:
+f_i ≈ x_i × P_dry</li>
+<li>Dilute solution:
+a ≈ m</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>For <code>units="fugacity"</code>, the input is used directly and no equilibrium
+conversion is performed.</li>
+<li>For <code>units="molality"</code> and <code>units="ppm"</code>, the required fugacity is
+calculated from:
+log_f = log_a - logK</li>
+<li>Scientific notation inputs are supported as long as they are valid
+numeric values.</li>
+</ul></div>
+</dd>
+<dt id="media_design.gas_dissolution.logK_gas_to_aq"><code class="name flex">
+<span>def <span class="ident">logK_gas_to_aq</span></span>(<span>gas: str, T_C: float, P_bar: float) ‑> float</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def logK_gas_to_aq(gas: str, T_C: float, P_bar: float) -&gt; float:
+    &#34;&#34;&#34;
+    Calculate the equilibrium constant for dissolution of a gas into aqueous form.
+
+    Parameters
+    ----------
+    gas : str
+        Gas species name recognized by the WORM thermodynamic database.
+    T_C : float
+        Temperature in degrees Celsius.
+    P_bar : float
+        Pressure in bar.
+
+    Returns
+    -------
+    float
+        Equilibrium constant expressed as logK for the reaction:
+
+        gas(g) = gas(aq)
+
+    Notes
+    -----
+    The calculation is performed using `pychnosz.subcrt` with the WORM
+    thermodynamic database loaded at module import.
+    &#34;&#34;&#34;
+   
+    if subcrt is None:
+        raise ImportError(&#34;pychnosz is required for logK_gas_to_aq().&#34;)
+        
+    res = subcrt(
+        species=[gas, gas],
+        coeff=[-1, 1],
+        state=[&#34;gas&#34;, &#34;aq&#34;],
+        T=T_C,
+        P=P_bar,
+    )
+    out = subcrt_out(res)
+    return float(out[&#34;logK&#34;].iloc[0])</code></pre>
+</details>
+<div class="desc"><p>Calculate the equilibrium constant for dissolution of a gas into aqueous form.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>gas</code></strong> :&ensp;<code>str</code></dt>
+<dd>Gas species name recognized by the WORM thermodynamic database.</dd>
+<dt><strong><code>T_C</code></strong> :&ensp;<code>float</code></dt>
+<dd>Temperature in degrees Celsius.</dd>
+<dt><strong><code>P_bar</code></strong> :&ensp;<code>float</code></dt>
+<dd>Pressure in bar.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>
+<p>Equilibrium constant expressed as logK for the reaction:</p>
+<p>gas(g) = gas(aq)</p>
+</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<p>The calculation is performed using <code>pychnosz.subcrt</code> with the WORM
+thermodynamic database loaded at module import.</p></div>
+</dd>
+<dt id="media_design.gas_dissolution.subcrt_out"><code class="name flex">
+<span>def <span class="ident">subcrt_out</span></span>(<span>res)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def subcrt_out(res):
+    &#34;&#34;&#34;
+    Extract the reaction output table from a pyCHNOSZ `subcrt` result.
+
+    Parameters
+    ----------
+    res : object
+        Result returned by `pychnosz.subcrt`. Supported return types are:
+        - an object with an `.out` attribute
+        - a dictionary containing an `&#34;out&#34;` key
+
+    Returns
+    -------
+    pandas.DataFrame
+        Output table containing thermodynamic results from `subcrt`.
+
+    Raises
+    ------
+    TypeError
+        If `res` is not a supported `subcrt` return type.
+
+    Notes
+    -----
+    This helper provides compatibility across different pyCHNOSZ return
+    formats.
+    &#34;&#34;&#34;
+    if hasattr(res, &#34;out&#34;):
+        return res.out
+    if isinstance(res, dict) and &#34;out&#34; in res:
+        return res[&#34;out&#34;]
+    raise TypeError(f&#34;Unexpected subcrt return type: {type(res)}&#34;)</code></pre>
+</details>
+<div class="desc"><p>Extract the reaction output table from a pyCHNOSZ <code>subcrt</code> result.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>res</code></strong> :&ensp;<code>object</code></dt>
+<dd>Result returned by <code>pychnosz.subcrt</code>. Supported return types are:
+- an object with an <code>.out</code> attribute
+- a dictionary containing an <code>"out"</code> key</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>Output table containing thermodynamic results from <code>subcrt</code>.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>TypeError</code></dt>
+<dd>If <code>res</code> is not a supported <code>subcrt</code> return type.</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<p>This helper provides compatibility across different pyCHNOSZ return
+formats.</p></div>
+</dd>
+<dt id="media_design.gas_dissolution.vapor_pressure_H2O_bar"><code class="name flex">
+<span>def <span class="ident">vapor_pressure_H2O_bar</span></span>(<span>T_C: float) ‑> float</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def vapor_pressure_H2O_bar(T_C: float) -&gt; float:
+    &#34;&#34;&#34;
+    Calculate water vapor pressure in bar using the Antoine equation.
+
+    Parameters
+    ----------
+    T_C : float
+        Temperature in degrees Celsius.
+
+    Returns
+    -------
+    float
+        Water vapor pressure in bar.
+
+    Notes
+    -----
+    - Uses Antoine equation constants for water:
+      A = 8.07131, B = 1730.63, C = 233.426
+    - Intermediate pressure is calculated in mmHg and then converted to bar.
+    - This parameterization is appropriate approximately over 1-100 °C.
+    &#34;&#34;&#34;
+    A, B, C = 8.07131, 1730.63, 233.426  # water; P in mmHg
+    P_mmHg = 10 ** (A - B / (C + T_C))
+    return P_mmHg / 750.062  # mmHg -&gt; bar</code></pre>
+</details>
+<div class="desc"><p>Calculate water vapor pressure in bar using the Antoine equation.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>T_C</code></strong> :&ensp;<code>float</code></dt>
+<dd>Temperature in degrees Celsius.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>Water vapor pressure in bar.</dd>
+</dl>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Uses Antoine equation constants for water:
+A = 8.07131, B = 1730.63, C = 233.426</li>
+<li>Intermediate pressure is calculated in mmHg and then converted to bar.</li>
+<li>This parameterization is appropriate approximately over 1-100 °C.</li>
+</ul></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="media_design" href="index.html">media_design</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="media_design.gas_dissolution.dissolved_gases_from_headspace" href="#media_design.gas_dissolution.dissolved_gases_from_headspace">dissolved_gases_from_headspace</a></code></li>
+<li><code><a title="media_design.gas_dissolution.headspace_from_dissolved_target" href="#media_design.gas_dissolution.headspace_from_dissolved_target">headspace_from_dissolved_target</a></code></li>
+<li><code><a title="media_design.gas_dissolution.logK_gas_to_aq" href="#media_design.gas_dissolution.logK_gas_to_aq">logK_gas_to_aq</a></code></li>
+<li><code><a title="media_design.gas_dissolution.subcrt_out" href="#media_design.gas_dissolution.subcrt_out">subcrt_out</a></code></li>
+<li><code><a title="media_design.gas_dissolution.vapor_pressure_H2O_bar" href="#media_design.gas_dissolution.vapor_pressure_H2O_bar">vapor_pressure_H2O_bar</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>
