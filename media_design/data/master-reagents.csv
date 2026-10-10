@@ -1,0 +1,149 @@
+reagent_name,ion,stoichiometry,molar_mass,print,rule
+(NH4)2SO4,NH4+,2,132.1,,
+(NH4)2SO4,SO4-2,1,132.1,,
+AlCl3•6H2O,Al+3,1,241.43,WARNING: Do not autoclave. Releases hazardous vapors when heated.,No
+AlCl3•6H2O,Cl-,3,241.43,WARNING: Do not autoclave. Releases hazardous vapors when heated.,No
+Al(NO3)3•9H2O,Al+3,1,375.13,WARNING: Do not autoclave. Rapid hydrolysis in water.,
+Al(NO3)3•9H2O,NO3-,3,375.13,WARNING: Do not autoclave. Rapid hydrolysis in water.,
+Al2(SO4)3,Al+3,2,342.2,,
+Al2(SO4)3,SO4-2,3,342.2,,
+AlK(SO4)2•12H2O,Al+3,1,474.4,,
+AlK(SO4)2•12H2O,K+,1,474.4,,
+AlK(SO4)2•12H2O,SO4-2,2,474.4,,
+BaCl2,Ba+2,1,208.2,,
+BaCl2,Cl-,2,208.2,,
+BeSO4,Be+2,1,105.1,,
+BeSO4,SO4-2,1,105.1,,
+CaBr2,Ca+2,1,199.9,WARNING: May precipitate with carbonates or phosphates during autoclaving.,"HCO3-, PO4-3"
+CaBr2,Br-,2,199.9,WARNING: May precipitate with carbonates or phosphates during autoclaving.,"HCO3-, PO4-3"
+CaCl2•2H2O,Ca+2,1,111,WARNING: May precipitate with carbonates or phosphates during autoclaving.,"HCO3-, PO4-3"
+CaCl2•2H2O,Cl-,2,111,WARNING: May precipitate with carbonates or phosphates during autoclaving.,"HCO3-, PO4-3"
+CaCl2,Ca+2,1,110.98,,
+CaCl2,Cl-,2,110.98,,
+CaC2O4,Ca+2,1,128.097,,
+CaC2O4,oxalate-2,1,128.097,,
+CdSO4•8/3H2O,Cd+2,3,769.5,,
+CdSO4•8/3H2O,SO4-2,3,769.5,,
+CoCl2•6H2O,Co+2,1,237.9,,
+CoCl2•6H2O,Cl-,2,237.9,,
+CsCl,Cs+,1,168.4,,
+CsCl,Cl-,1,168.4,,
+CuCl2•2H2O,Cu+2,1,170.5,,
+CuCl2•2H2O,Cl-,2,170.5,,
+CuSO4•5H2O,Cu+2,1,249.7,"WARNING: May precipitate with phosphate, carbonate, or sulfide during autoclaving.","HCO3-, PO4-3, HS-"
+CuSO4•5H2O,SO4-2,1,249.7,"WARNING: May precipitate with phosphate, carbonate, or sulfide during autoclaving.","HCO3-, PO4-3, HS-"
+Fe(NO3)3•9H2O,Fe+3,1,404,,
+Fe(NO3)3•9H2O,NO3-,3,404,,
+Fe2(SO4)3,Fe+3,2,399.9,"WARNING: May precipitate with phosphate, carbonate, or at elevated pH during autoclaving.","HCO3-, PO4-3"
+Fe2(SO4)3,SO4-2,3,399.9,"WARNING: May precipitate with phosphate, carbonate, or at elevated pH during autoclaving.","HCO3-, PO4-3"
+FeCl3•6H2O,Fe+3,1,270.3,WARNING: Autoclavable but prone to hydrolysis and precipitation; commonly filter-sterilized.,No
+FeCl3•6H2O,Cl-,3,270.3,WARNING: Autoclavable but prone to hydrolysis and precipitation; commonly filter-sterilized.,No
+FeCl3,Fe+3,1,162.2,WARNING: Do not autoclave. Will hydrolyze and preciptate.,No
+FeCl3,Cl-,3,162.2,WARNING: Do not autoclave. Will hydrolyze and preciptate.,No
+FeCl2,Fe+2,1,126.75,WARNING: Do not autoclave. Iron will oxidize.,No
+FeCl2,Cl-,2,126.75,WARNING: Do not autoclave. Iron will oxidize.,No
+FeSO4•7H2O,Fe+2,1,278,WARNING: Do not autoclave. Iron will oxidize.,No
+FeSO4•7H2O,SO4-2,1,278,WARNING: Do not autoclave. Iron will oxidize.,No
+FeNaEDTA,Fe+3,1,371.1,,
+FeNaEDTA,Na+,1,371.1,,
+FeNaEDTA,EDTA-4,1,371.1,,
+Ga(NO3)3,Ga+3,1,255.7,,
+Ga(NO3)3,NO3-,3,255.7,,
+H2WO4,WO4-2,1,249.9,WARNING: May precipitate if autoclaved with oxalic acid,No
+H3BO3,B(OH)3,1,61.8,,
+HfCl4,Hf+4,1,320.3,WARNING: Do not autoclave. Rapid hydrolysis in water.,No
+HfCl4,Cl-,4,320.3,WARNING: Do not autoclave. Rapid hydrolysis in water.,No
+KHCO3,K+,1,100.1,WARNING: Autoclaving not recommended.,No
+KHCO3,HCO3-,1,100.1,WARNING: Autoclaving not recommended.,No
+K2HPO4,K+,2,174.2,,
+K2HPO4,HPO4-2,1,174.2,,
+K2SO4,K+,2,174.3,,
+K2SO4,SO4-2,1,174.3,,
+KBr,K+,1,119,,
+KBr,Br-,1,119,,
+KCl,K+,1,74.6,,
+KCl,Cl-,1,74.6,,
+KH2AsO4,K+,1,180,,
+KH2AsO4,H2AsO4-,1,180,,
+KH2PO4,K+,1,136.1,,
+KH2PO4,PO4-3,1,136.1,,
+KNO2,K+,1,85.1,,
+KNO2,NO2-,1,85.1,,
+LaCl3,La+3,1,245.3,,
+LaCl3,Cl-,3,245.3,,
+LiCl,Li+,1,42.4,,
+LiCl,Cl-,1,42.4,,
+MgSO4•7H2O,Mg+2,1,246.5,"WARNING: May precipitate with phosphate, carbonate, or fluoride during autoclaving.","HCO3-, PO4-3, F-"
+MgSO4•7H2O,SO4-2,1,246.5,"WARNING: May precipitate with phosphate, carbonate, or fluoride during autoclaving.","HCO3-, PO4-3, F-"
+MgCl2•6H2O,Mg+2,1,203.3,,
+MgCl2•6H2O,Cl-,2,203.3,,
+MgCl2,Mg+2,1,95.211,,
+MgCl2,Cl-,1,95.211,,
+MnCl2•4H2O,Mn+2,1,197.9,WARNING: Autoclavable. Avoid sulfide and high-pH conditions.,HS-
+MnCl2•4H2O,Cl-,2,197.9,WARNING: Autoclavable. Avoid sulfide and high-pH conditions.,HS-
+Na2HPO4,Na+,2,142,"WARNING: Autoclavable. At very high concentrations or with certain reagents, may crystallize; rare peroxide formation has been reported with some sugars ",No
+Na2HPO4,HPO4-2,1,142,"WARNING: Autoclavable. At very high concentrations or with certain reagents, may crystallize; rare peroxide formation has been reported with some sugars ",No
+NaHCO3,Na+,1,84,WARNING: Autoclaving possible but not recommended. May form preciptates with other common reagents.,No
+NaHCO3,HCO3-,1,84,WARNING: Autoclaving possible but not recommended. May form preciptates with other common reagents.,No
+Na2MoO4•2H2O,Na+,2,242,,
+Na2MoO4•2H2O,MoO4-2,1,242,,
+Na2S•9H2O,HS-,1,240.2,WARNING: Recommended to autoclave anaerobically,No
+Na2SiO3,SiO2,1,122.1,WARNING: May precipitate if autoclaved,No
+Na2SiO3,Na+,2,122.1,WARNING: May precipitate if autoclaved,No
+Na2SO4,Na+,2,142,,
+Na2SO4,SO4-2,1,142,,
+Na2WO4,Na+,2,293.8,,
+Na2WO4,WO4-2,1,293.8,,
+NaBr,Na+,1,102.9,,
+NaBr,Br-,1,102.9,,
+NaCl,Na+,1,58.4,,
+NaCl,Cl-,1,58.4,,
+NaHCO3,Na+,1,84,,
+NaHCO3,HCO3-,1,84,,
+NaH2AsO4,Na+,1,181.9,WARNING: Do not autoclave. Releases hazardous vapors when heated.,No
+NaH2AsO4,H2AsO4-,1,181.9,WARNING: Do not autoclave. Releases hazardous vapors when heated.,No
+NaHS,Na+,1,56.1,WARNING: Do not autoclave. Releases hazardous vapors when heated.,No
+NaHS,HS-,1,56.1,WARNING: Do not autoclave. Releases hazardous vapors when heated.,No
+NaF,Na+,1,42,,
+NaF,F-,1,42,,
+NaNbO3,Na+,1,163.9,,
+NaNbO3,NbO3-,1,163.9,,
+NaNO2,Na+,1,69,WARNING: Autoclavable alone. Chemically reactive; may oxidize or react with reduced species or organics. Often filter-sterilized and added separately.,No
+NaNO2,NO2-,1,69,WARNING: Autoclavable alone. Chemically reactive; may oxidize or react with reduced species or organics. Often filter-sterilized and added separately.,No
+NaNO3,Na+,1,85,,
+NaNO3,NO3-,1,85,,
+NaVO3,Na+,1,121.9,,
+NaVO3,VO+2,1,121.9,,
+NH4Br,NH4+,1,97.9,WARNING: Autoclaving not recommended. Ammonium decomposes into ammonia.,No
+NH4Br,Br-,1,97.9,WARNING: Autoclaving not recommended. Ammonium decomposes into ammonia.,No
+NH4Cl,NH4+,1,53.5,,
+NH4Cl,Cl-,1,53.5,,
+NH4H2PO4,NH4+,1,115,,
+NH4H2PO4,PO4-3,1,115,,
+NH4NO3,NH4+,1,80,WARNING: Do not autoclave. Heating produces nitrous oxide.,No
+NH4NO3,NO3-,1,80,WARNING: Do not autoclave. Heating produces nitrous oxide.,No
+NiCl2•6H2O,Ni+2,1,237.7,,
+NiCl2•6H2O,Cl-,2,237.7,,
+PbCrO4,Pb+2,1,323.2,WARNING: Do not autoclave. Heating produces toxic chromium fumes,No
+PbCrO4,CrO4-2,1,323.2,WARNING: Do not autoclave. Heating produces toxic chromium fumes,No
+RbCl,Rb+,1,120.9,WARNING: Autoclaving not recommended. Will degrade.,No
+RbCl,Cl-,1,120.9,WARNING: Autoclaving not recommended. Will degrade.,No
+SnCl2,Sn+2,1,189.6,"WARNING: When autoclaved with sulfates or phosphates, preciptation may occur","SO4-2, PO4-3"
+SnCl2,Cl-,2,189.6,"WARNING: When autoclaved with sulfates or phosphates, preciptation may occur","SO4-2, PO4-3"
+SrCl2•6H2O,Sr+2,1,266.4,"WARNING: When autoclaved with sulfates or phosphates, preciptation may occur","SO4-2, PO4-3"
+SrCl2•6H2O,Cl-,2,266.4,"WARNING: When autoclaved with sulfates or phosphates, preciptation may occur","SO4-2, PO4-3"
+SrCl2,Sr+2,1,158.53,,
+SrCl2,Cl-,2,158.53,,
+VOSO4•3.5H2O,VO+2,1,226.1,WARNING: Do not autoclave. Will oxidize and precipitate.,No
+VOSO4•3.5H2O,SO4-2,1,226.1,WARNING: Do not autoclave. Will oxidize and precipitate.,No
+YCl3,Y+3,1,195.3,"WARNING: Above pH 6, insoluble yttrium hydroxides will form",No
+YCl3,Cl-,3,195.3,"WARNING: Above pH 6, insoluble yttrium hydroxides will form",No
+ZnCl2,Zn+2,1,136.286,WARNING: May precipitate if autoclaved,No
+ZnCl2,Cl-,2,136.286,WARNING: May precipitate if autoclaved,No
+Zn(NO3)2•6H2O,Zn+2,1,297.48,,
+Zn(NO3)2•6H2O,NO3-,2,297.48,,
+ZnSO4•7H2O,Zn+2,1,287.5,"WARNING: When autoclaved with phosphates, preciptation may occur",PO4-3
+ZnSO4•7H2O,SO4-2,1,287.5,"WARNING: When autoclaved with phosphates, preciptation may occur",PO4-3
+ZrOCl2,Zr+4,1,233,WARNING: Autoclaving possible but might hydrolyze to form hydrated zirconia species at high temperatures,No
+ZrOCl2,O-2,1,233,WARNING: Autoclaving possible but might hydrolyze to form hydrated zirconia species at high temperatures,No
+ZrOCl2,Cl-,2,233,WARNING: Autoclaving possible but might hydrolyze to form hydrated zirconia species at high temperatures,No

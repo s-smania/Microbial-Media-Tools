@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "media-design"
+version = "1.1.0"
+description = "Provides tools for making geochemically informed microbial media."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Siena Smania", email = "siena.smania@gmail.com" }
+]
+keywords = ["geochemistry", "microbiology", "media"]
+
+# Runtime dependencies
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=2.1",
+    "scipy>=1.9",
+    "matplotlib>=3.7",
+    "ipython>=8",
+]
+
+[project.optional-dependencies]
+geochem = [
+    "aqequil>=1.2",
+    "pychnosz>=1.2",
+]
+
+# Needed to run the example notebooks in test/ as tests
+test = [
+    "pytest",
+    "nbclient",
+    "nbformat",
+    "ipykernel",
+]
+
+dev = [
+    "media-design[geochem,test]",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/s-smania/Microbial-Media-Tools"
+Issues = "https://github.com/s-smania/Microbial-Media-Tools/issues"
+
+# ---------------------------------------------------------------------------
+# Package discovery & data files
+# ---------------------------------------------------------------------------
+
+[tool.setuptools.packages.find]
+# Automatically find all packages (directories with __init__.py)
+where = ["."]
+
+[tool.setuptools.package-data]
+# Include CSV and TXT files that live inside the package's data folder.
+# The key is the importable package name; the values are glob patterns
+# relative to that package directory.
+"media_design" = [
+    "data/*.csv",
+    "data/*.txt",
+]
