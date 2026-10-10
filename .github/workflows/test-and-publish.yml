@@ -115,6 +115,7 @@ jobs:
     name: Upload to PyPI
     needs: [test, test-oldest-deps, build]
     runs-on: ubuntu-latest
+    environment: pypi
     # Only upload on release, and only if every test job passed
     if: github.event_name == 'release' && github.event.action == 'published'
 
